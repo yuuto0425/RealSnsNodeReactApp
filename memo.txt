@@ -1,0 +1,2 @@
+ターミナルコマンドでnpm run ~~と実行すると,
+package.jsonのscriptsのkey情報が~~の部分となり、valueの部分のコマンドが実行される

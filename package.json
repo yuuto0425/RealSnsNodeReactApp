@@ -1,0 +1,19 @@
+{
+  "name": "reactnodejsapp",
+  "version": "1.0.0",
+  "description": "ReactNodeJsApp",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "yuuto0425",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^5.1.1",
+    "mongoose": "^6.5.2",
+    "nodemon": "^2.0.19"
+  }
+}
+
