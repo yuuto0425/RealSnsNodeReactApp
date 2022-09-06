@@ -38,6 +38,7 @@ mongoose.connect(process.env.MONGOURL).then( () => {
 
 //ミドルウェア
 app.use(express.json());
+//json形式でデータを扱う
 app.use("/api/users",userRoute);
 app.use("/api/auth",authRoute);
 app.use("/api/posts",postsRoute);
