@@ -17,6 +17,13 @@ const UserSchema = new mongoose.Schema({
         required:true,
         min:6,
         max:50,
+        unique:true,
+    },
+    password: {
+        type:String,
+        required:true,
+        min:6,
+        max:50,
     },
     profilePicture : {
         type:String,
@@ -28,11 +35,11 @@ const UserSchema = new mongoose.Schema({
         default:"",
     },
     followers: {
-        type:String,
+        type:Array,
         default:[],
     },
     followings: {
-        type:String,
+        type:Array,
         default:[],
     },
     isAdmin:{

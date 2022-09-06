@@ -2,9 +2,11 @@ const  express = require('express');
 //expressフレームワークを読み込み
 const app = express();
 //読み込んだものをインスタンス化のような形で実行？する
+
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const postsRoute = require("./routes/posts");
+
 const PORT = 3000;
 //serverのポート番号を決める
 const mongoose = require("mongoose");
@@ -36,7 +38,12 @@ mongoose.connect(process.env.MONGOURL).then( () => {
 
 //ミドルウェア
 app.use(express.json());
-app.use("/api/users",userRoute)
-app.use("/api/auth",authRoute)
-app.use("/api/posts",postsRoute)
+app.use("/api/users",userRoute);
+app.use("/api/auth",authRoute);
+app.use("/api/posts",postsRoute);
+
+app.get("/",(req,res) => {
+    res.send("hello express")
+});
+
 app.listen(PORT,() => console.log('サーバーが起動しました。'));
